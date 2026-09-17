@@ -453,7 +453,7 @@ Provisions the website bucket with versioning, public access blocking, static we
 ## 🔮 Future Improvements
 
 ### Infrastructure
-- **Remote state management** — store `terraform.tfstate` in S3 with DynamoDB locking instead of locally, enabling team collaboration and preventing state conflicts
+- **Remote state management** — HashiCorp now recommends S3 native locking using `use_lockfile` = true; DynamoDB locking is deprecated.
 - **Terraform workspaces** — support multiple environments (staging, production) from the same codebase
 - **WAF integration** — add AWS Web Application Firewall to CloudFront for DDoS protection and rate limiting
 - **CloudFront access logging** — enable access logs to S3 for traffic analysis and debugging
